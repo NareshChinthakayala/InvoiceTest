@@ -1,0 +1,27 @@
+invoice:
+  col-id:
+    prefix: COLUMN
+    sequence: colid_sequence
+  file-id:
+    prefix: FILE
+    sequence: fileid_sequence
+logging:
+  file:
+    name: logs/invoice.log
+  level:
+    com:
+      acintyo: INFO
+server:
+  port: 8080
+spring:
+  application:
+    name: Invoice
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: system
+    url: jdbc:mysql://mysqldb:3306/invoice
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
